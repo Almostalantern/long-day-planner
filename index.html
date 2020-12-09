@@ -19,20 +19,209 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
+    <title>Work Day Planner</title>
   </head>
 
   <body>
+      <!-- header goes here -->
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
+      <h1 class="display-3">Work Day Planner</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+    <div class="row">
+      <div class="input-container input-group col-1 ">
+        <p>9AM</p>
+      </div>
+    <div class="input-group col-10 form-group">
+        <textarea id=9AMTxtBox class="form-control custom-control textborder" rows="2" 
+            name="9"> </textarea>
+            <button class="saveBtn  col-1 btn"> 
+              <span style="font-size: 15px; color: rebeccapurple "> Save?
+              </span>
+            </button>
+      </div>
+   </div>
+   
+   <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>10AM</p>
     </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=10AMTxtBox class="form-control custom-control textborder" rows="2" 
+          name="10"></textarea>
+          <button class="saveBtn  col-1 btn"> 
+            <span style="font-size: 15px; color: rebeccapurple "> Save?
+            </span>
+          </button>
+    </div>
+   </div>
+
+ <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>11AM</p>
+    </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=11AMTxtBox class="form-control custom-control textborder" rows="2"
+          name="11"> </textarea>
+          <button class="saveBtn  col-1 btn"> 
+            <span style="font-size: 15px; color: rebeccapurple "> Save?
+            </span>
+          </button>
+   </div>
+ </div>
+ 
+ <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>12AM</p>
+    </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=12AMTxtBox class="form-control custom-control textborder" rows="2" 
+          name="12"> </textarea>
+          <button class="saveBtn  col-1 btn">
+             <span style="font-size: 15px; color: rebeccapurple "> Save?
+             </span>
+          </button>
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>1PM</p>
+    </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=1PMTxtBox class="form-control custom-control textborder" rows="2" 
+          name="13"> </textarea>
+          <button class="saveBtn col-1 btn">
+             <span style="font-size: 15px; color: rebeccapurple "> Save?
+             </span>
+            </button>
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>2PM</p>
+    </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=2PMTxtBox class="form-control custom-control textborder" rows="2"
+          name="14"> </textarea>
+          <button class="saveBtn  col-1 btn">
+             <span style="font-size: 15px; color: rebeccapurple "> Save?
+             </span>
+          </button>
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>3PM</p>
+    </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=3PMTxtBox class="form-control custom-control textborder" rows="2"
+          name="15"> </textarea>
+          <button class="saveBtn  col-1 btn">
+             <span style="font-size: 15px; color: rebeccapurple "> Save?
+             </span>
+          </button>
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>4PM</p>
+    </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=4PMTxtBox class="form-control custom-control textborder" rows="2"
+          name="16"> </textarea>
+          <button class="saveBtn  col-1 btn"> 
+            <span style="font-size: 15px; color: rebeccapurple "> Save?
+            </span>
+          </button>
+    </div>
+ </div>
+
+ <div class="row">
+    <div class="input-container input-group col-1 ">
+      <p>5PM</p>
+    </div>
+  <div class="input-group  col-10 form-group">
+      <textarea id=5PMTxtBox class="form-control custom-control textborder" rows="2" 
+          name="17"> </textarea>
+          <button class="saveBtn  col-1 btn">
+           <span style="font-size: 15px; color: rebeccapurple "> Save?
+           </span>
+          </button>
+    </div>
+ </div>
+
+</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+
+      //captures the current time. 
+        $(document).ready(function(){
+            var cD = moment().format('MM Do YY');
+        console.log(cD);
+        $("#currentDay").append(cD);
+
+        var now = parseInt(moment().format('HH'));
+        console.log(now) ;
+
+    var $9AMTxtBox = $("#9AMTxtBox");
+    var $10AMTxtBox = $("10AMTxtBox");
+    var $11AMTxtBox = $("#11AMTxtBox");
+    var $12AMTxtBox = $("#12AMTxtBox");
+    var $1PMTxtBox = $("#1PMTxtBox");
+    var $2PMTxtBox = $("#2PMTxtBox");
+    var $3PMTxtBox = $("#3PMTxtBox");
+    var $4PMTxtBox = $("#4PMTxtBox");
+    var $5PMTxtBox = $("#5PMTxtBox");
+    
+    // function for changing colors depending on time
+    $("textarea").each(function () {
+        var time = parseInt($(this).attr("name"));
+        if (time < now) {
+            $(this).addClass("past");
+        }
+        if (time > now) {
+            $(this).addClass("future");
+        }
+        if (time === now) {
+            $(this).addClass("present");
+        }
+    })
+    
+    $("button").on("click", function () {
+        //stashing text in the local storage
+        localStorage.setItem("9AM", ($9AMTxtBox.val()))
+        localStorage.setItem("10AM", ($10AMTxtBox.val()))
+        localStorage.setItem("11AM", ($11AMTxtBox.val()))
+        localStorage.setItem("12AM", ($12AMTxtBox.val()))
+        localStorage.setItem("13PM", ($1PMTxtBox.val()))
+        localStorage.setItem("14PM", ($2PMTxtBox.val()))
+        localStorage.setItem("15PM", ($3PMTxtBox.val()))
+        localStorage.setItem("16PM", ($4PMTxtBox.val()))
+        localStorage.setItem("17PM", ($5PMTxtBox.val()))
+    })
+    // Here we take stored content and append it to the browser
+    $("#9AMTxtBox").append(localStorage.getItem("9AM"));
+    $("#10AMTxtBox").append(localStorage.getItem("10AM"));
+    $("#11AMTxtBox").append(localStorage.getItem("11AM"));
+    $("#12AMTxtBox").append(localStorage.getItem("12AM"));
+    $("#1PMTxtBox").append(localStorage.getItem("13PM"));
+    $("#2PMTxtBox").append(localStorage.getItem("14PM"));
+    $("#3PMTxtBox").append(localStorage.getItem("15PM"));
+    $("#4PMTxtBox").append(localStorage.getItem("16PM"));
+    $("#5PMTxtBox").append(localStorage.getItem("17PM"));
+})
+
+        
+        
+   </script>
   </body>
 </html>
